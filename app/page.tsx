@@ -8,7 +8,7 @@ export default function Home() {
         {/* Left — Image */}
         <div className="flex justify-center md:justify-start">
           <Image
-            src="/effie_jo_ai.jpg"
+            src="/effie_jo.jpg"
             alt="Effie Jo"
             width={360}
             height={360}
