@@ -1,36 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🐾 Effie Jo — Dog Park Intake App
 
-## Getting Started
+A modern web application built with Next.js, deployed on Vercel, and powered by a serverless Google Apps Script backend that writes submissions directly to Google Sheets.
 
-First, run the development server:
+Live App: [https://your-vercel-url.vercel.app](https://effie-jo-ai.vercel.app/)
 
-```bash
+Repository: https://github.com/cramseyw/effie-jo-ai
+
+Overview
+
+This project modernizes a previously built intake form into a production-ready, full-stack application.
+
+The app collects structured dog profile data and writes clean, schema-aligned submissions into a Google Sheet via a custom Apps Script endpoint.
+
+It demonstrates:
+
+Frontend architecture with Next.js (App Router)
+
+TypeScript implementation
+
+Tailwind-based UI system
+
+Form validation + controlled submission state
+
+Serverless backend integration
+
+Clean data mapping to spreadsheet headers
+
+CI/CD deployment via GitHub → Vercel
+
+Architecture
+
+Frontend:
+
+Next.js (App Router)
+
+TypeScript
+
+Tailwind CSS
+
+Client-side form state management
+
+Backend:
+
+Google Apps Script (Web App deployment)
+
+POST endpoint using doPost(e)
+
+Header-based row mapping to ensure clean schema alignment
+
+Multi-select field normalization
+
+Data Flow:
+
+User submits form
+→ Frontend converts FormData into structured payload
+→ POST to Apps Script endpoint
+→ Apps Script maps headers dynamically
+→ Row appended to Google Sheet
+→ JSON success response returned
+
+Deployment:
+
+GitHub repository
+
+Automatic deployments via Vercel CI/CD
+
+Production URL generated per commit
+
+Key Features
+
+Structured intake fields (age group, size, energy level)
+
+Multi-select treat preferences
+
+Optional free-text additional details
+
+Submission state handling (idle, submitting, success, error)
+
+Scroll-to-top confirmation UX
+
+Clean spreadsheet schema mapping
+
+Serverless backend (no traditional server required)
+
+Local Development
+
+Install dependencies:
+
+npm install
+
+
+Run development server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Visit:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+http://localhost:3000
 
-## Learn More
+Why This Project
 
-To learn more about Next.js, take a look at the following resources:
+This project showcases:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+End-to-end ownership (frontend, backend, deployment)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Practical serverless architecture
 
-## Deploy on Vercel
+Clean UX refinement
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Data integrity and schema alignment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Iterative modernization of an originally hand-built form into a production deployment
+
+Built by Claire Wescott
+Boston, MA
