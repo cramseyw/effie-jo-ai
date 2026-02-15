@@ -1,117 +1,75 @@
-🐾 Effie Jo — Dog Park Intake App
+# 🐾 Effie Jo – Dog Park Intake Web App
 
-A modern web application built with Next.js, deployed on Vercel, and powered by a serverless Google Apps Script backend that writes submissions directly to Google Sheets.
+A modern, production-ready web application built with **Next.js (App Router)** and deployed via **Vercel CI/CD**, with a serverless **Google Apps Script** backend that writes structured submissions to Google Sheets.
 
-Live App: [https://your-vercel-url.vercel.app](https://effie-jo-ai.vercel.app/)
+This project demonstrates full-stack ownership: frontend UX, data validation, backend processing, and deployment automation.
 
-Repository: https://github.com/cramseyw/effie-jo-ai
+---
 
-Overview
+## 🌐 Live Application
 
-This project modernizes a previously built intake form into a production-ready, full-stack application.
+**Live App:** [https://your-vercel-url.vercel.app  ](https://effie-jo-ai.vercel.app/)
+**Code Repository:** https://github.com/cramseyw/effie-jo-ai
 
-The app collects structured dog profile data and writes clean, schema-aligned submissions into a Google Sheet via a custom Apps Script endpoint.
+---
 
-It demonstrates:
+## 🏗 Architecture Overview
 
-Frontend architecture with Next.js (App Router)
+**Frontend**
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
+- Custom form handling & validation
 
-TypeScript implementation
+**Backend**
+- Google Apps Script (serverless)
+- Header-based schema mapping to Google Sheets
+- LockService for concurrency protection
 
-Tailwind-based UI system
+**Deployment**
+- GitHub → Vercel (automatic CI/CD)
+- Production deployments triggered on merge to `main`
 
-Form validation + controlled submission state
+---
 
-Serverless backend integration
+## ⚙️ Key Features
 
-Clean data mapping to spreadsheet headers
+- Structured multi-field intake form
+- Custom select components with improved UX
+- Multi-select checkbox handling with array serialization
+- Schema-aware backend mapping (headers dynamically matched to payload)
+- Error handling + success state messaging
+- Clean, recruiter-ready UI with professional polish
+- Serverless architecture (no traditional backend hosting required)
 
-CI/CD deployment via GitHub → Vercel
+---
 
-Architecture
+## 🔍 Data Flow
 
-Frontend:
+1. User submits intake form.
+2. Frontend serializes form data.
+3. POST request sent to Google Apps Script endpoint.
+4. Backend:
+   - Locks script execution
+   - Maps headers to payload fields
+   - Writes clean row to Google Sheet
+5. Returns JSON success response.
+6. UI displays confirmation state.
 
-Next.js (App Router)
+---
 
-TypeScript
+## 🚀 What This Project Demonstrates
 
-Tailwind CSS
+- Full-stack system thinking
+- Production deployment workflow (CI/CD)
+- Serverless backend integration
+- Data integrity and schema alignment
+- Cross-functional technical ownership
 
-Client-side form state management
+---
 
-Backend:
+## 📦 Local Development
 
-Google Apps Script (Web App deployment)
-
-POST endpoint using doPost(e)
-
-Header-based row mapping to ensure clean schema alignment
-
-Multi-select field normalization
-
-Data Flow:
-
-User submits form
-→ Frontend converts FormData into structured payload
-→ POST to Apps Script endpoint
-→ Apps Script maps headers dynamically
-→ Row appended to Google Sheet
-→ JSON success response returned
-
-Deployment:
-
-GitHub repository
-
-Automatic deployments via Vercel CI/CD
-
-Production URL generated per commit
-
-Key Features
-
-Structured intake fields (age group, size, energy level)
-
-Multi-select treat preferences
-
-Optional free-text additional details
-
-Submission state handling (idle, submitting, success, error)
-
-Scroll-to-top confirmation UX
-
-Clean spreadsheet schema mapping
-
-Serverless backend (no traditional server required)
-
-Local Development
-
-Install dependencies:
-
+```bash
 npm install
-
-
-Run development server:
-
 npm run dev
-
-
-Visit:
-
-http://localhost:3000
-
-Why This Project
-
-This project showcases:
-
-End-to-end ownership (frontend, backend, deployment)
-
-Practical serverless architecture
-
-Clean UX refinement
-
-Data integrity and schema alignment
-
-Iterative modernization of an originally hand-built form into a production deployment
-
-Built by Claire Wescott
-Boston, MA
