@@ -8,7 +8,7 @@ This project demonstrates full-stack ownership: frontend UX, data validation, ba
 
 ## 🌐 Live Application
 
-**Live App:** [https://your-vercel-url.vercel.app  ](https://effie-jo-ai.vercel.app/)
+**Live App:** ([https://dog-park-intake.vercel.app/](https://dog-park-intake.vercel.app/))
 **Code Repository:** [https://github.com/cramseyw/dog-park-intake](https://github.com/cramseyw/dog-park-intake)
 
 ---
